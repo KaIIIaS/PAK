@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "stegoguard-png"
+version = "1.0.0"
+description = "Программный комплекс ИБ для автоматизированного анализа и оценки стеганографической стойкости PNG-изображений в промышленных системах"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = ["numpy>=1.22", "scipy>=1.8", "Pillow>=9.0", "matplotlib>=3.5"]
+
+[project.scripts]
+stegoguard = "stegoguard.cli:main"
+
+[tool.setuptools]
+packages = ["stegoguard", "stegoguard.analysis"]

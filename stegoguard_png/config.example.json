@@ -1,0 +1,39 @@
+{
+  "thresholds": {
+    "payload_suspicious": 0.05,
+    "payload_stego": 0.1,
+    "chi_square_p": 0.95,
+    "risk_suspicious": 30.0,
+    "risk_stego": 60.0,
+    "text_chunk_max_len": 2048,
+    "ancillary_max_bytes": 65536,
+    "high_entropy": 7.2
+  },
+  "robustness": {
+    "rates": [
+      0.005,
+      0.01,
+      0.02,
+      0.05,
+      0.1,
+      0.2,
+      0.3,
+      0.5,
+      0.75,
+      1.0
+    ],
+    "methods": [
+      "lsb_replacement",
+      "lsb_matching"
+    ],
+    "trials": 2,
+    "max_side": 512,
+    "detection_threshold": 0.5
+  },
+  "analysis_max_pixels": 4000000,
+  "seed": 20240901,
+  "include_alpha": false,
+  "db_path": "stegoguard_history.db",
+  "log_level": "INFO",
+  "log_file": null
+}
